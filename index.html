@@ -2,222 +2,234 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Fred Exam</title>
 
 <style>
-/* --------------------------- */
-/*        GLOBAL STYLE        */
-/* --------------------------- */
+/* ------------------------------------ */
+/*             GLOBAL STYLE             */
+/* ------------------------------------ */
 body {
     margin: 0;
     font-family: sans-serif;
-    background: linear-gradient(135deg,#4dd0e1,#3f51b5);
+    background: linear-gradient(145deg, #4e00c2, #1bc8f3);
+    padding: 20px;
     color: #222;
-    padding: 25px 12px;
 }
 
 .container {
-    max-width: 480px;
+    max-width: 750px;
     margin: auto;
 }
 
-/* --------------------------- */
-/*          HEADER             */
-/* --------------------------- */
-
-.title {
-    font-size: 32px;
-    text-align: center;
-    color: white;
-    font-weight: 800;
-    margin-top: 10px;
-}
-
-.sub {
-    text-align: center;
-    color: white;
-    opacity: .85;
-    margin-top: 4px;
-}
-
-/* Moon Icon */
-.moon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 4px 12px rgba(0,0,0,0.3);
-    z-index: 10;
-}
-
-/* --------------------------- */
-/*       RECORD BOX            */
-/* --------------------------- */
-
-.record-box {
-    margin-top: 25px;
-    background: linear-gradient(135deg,#ffe082,#ffca28);
-    border-radius: 22px;
-    padding: 22px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(255,193,7,0.4);
-}
-
-.record-title {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.stars {
-    font-size: 26px;
-    margin: 10px 0;
-}
-
-/* --------------------------- */
-/*       REGISTER CARD         */
-/* --------------------------- */
-
+/* ------------------------------------ */
+/*             MAIN CARD                */
+/* ------------------------------------ */
 .card {
     background: white;
-    border-radius: 28px;
     padding: 25px;
-    margin-top: 25px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    border-radius: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
 }
 
-.register-title {
-    font-weight:700;
-    font-size:22px;
-    margin:0;
+/* ------------------------------------ */
+/*           TITLE + ICON               */
+/* ------------------------------------ */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.header h1 {
+    margin: 10px 0 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+.header .sub {
+    font-size: 17px;
+    color: #555;
 }
 
-.input {
-    width:100%;
-    padding:16px;
-    border-radius:14px;
-    border:2px solid #ccc;
-    margin-top:12px;
-    font-size:17px;
-    outline:none;
+/* ------------------------------------ */
+/*          BEST SCORE BOX             */
+/* ------------------------------------ */
+.score-box {
+    background: linear-gradient(135deg, #ffe08a, #ffb64c);
+    padding: 22px;
+    border-radius: 22px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
 }
-.input:focus {
-    border-color:#42a5f5;
+.score-box h3 {
+    margin: 0;
+    font-size: 22px;
+}
+.score-box .percent {
+    margin: 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.stars {
+    font-size: 30px;
+    color: gold;
 }
 
+/* ------------------------------------ */
+/*          REGISTER FORM              */
+/* ------------------------------------ */
+.form-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+input {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 14px;
+    border: 2px solid #d0d0d0;
+    margin-top: 10px;
+}
 .btn-green {
-    width:100%;
-    background:#4caf50;
-    padding:16px;
-    border-radius:16px;
-    border:none;
-    margin-top:15px;
-    color:white;
-    font-size:20px;
-    font-weight:700;
-    box-shadow:0 7px 18px rgba(76,175,80,0.4);
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: #05b55a;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+}
+.tip {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
 }
 
-/* --------------------------- */
-/*         MAIN BUTTON         */
-/* --------------------------- */
-
-.btn-main {
-    width:100%;
-    padding:18px;
-    border-radius:20px;
-    font-size:20px;
-    font-weight:700;
-    color:white;
-    text-align:center;
-    border:none;
-    background: linear-gradient(45deg,#673ab7,#3f51b5);
-    margin:15px 0;
+/* ------------------------------------ */
+/*     TRAINING MODE OPTIONS BOX        */
+/* ------------------------------------ */
+.mode-box {
+    background: white;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    margin-bottom: 25px;
+}
+.mode-item {
+    background: #f7f7f7;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+.mode-selected {
+    background: #0d6efd;
+    color: white;
 }
 
-/* --------------------------- */
-/*       WHITE BUTTONS         */
-/* --------------------------- */
-
-.btn-white {
-    width:100%;
-    padding:16px;
-    border-radius:20px;
-    font-size:18px;
-    background:white;
-    border:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom:12px;
-    text-align:right;
+/* ------------------------------------ */
+/*          SPEED SELECTOR             */
+/* ------------------------------------ */
+.speed-box {
+    background: white;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    margin-bottom: 25px;
 }
+.speed-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.speed-row {
+    display: flex;
+    gap: 10px;
+}
+.speed-item {
+    flex: 1;
+    text-align: center;
+    background: #f0f0f0;
+    padding: 12px;
+    border-radius: 12px;
+}
+.speed-active {
+    background: #0d6efd;
+    color: white;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="moon">🌙</div>
-
 <div class="container">
 
-    <div class="title">The Fred Exam</div>
-    <div class="sub">ارائه شده توسط Fred</div>
-
-    <!-- RECORD BOX -->
-    <div class="record-box">
-        <div class="record-title">بهترین رکورد شما 🏆</div>
-        <div style="margin-top:8px;font-size:18px;">۰٪ – بدون عنوان</div>
-        <div style="font-size:14px;color:#444;margin-top:4px;">۱۴۰۴/۹/۴</div>
-        <div class="stars">☆ ☆ ☆ ☆ ☆</div>
-        <div style="font-size:15px;">مجموع ستاره‌ها: ۰ ⭐</div>
+    <!-- HEADER -->
+    <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" width="55" style="filter:brightness(1.2); margin-bottom:8px;">
+        <h1>The Fred Exam</h1>
+        <div class="sub">ارائه شده توسط Fred</div>
     </div>
 
-    <!-- REGISTER CARD -->
+    <!-- BEST SCORE BOX -->
+    <div class="score-box">
+        <h3>🏆 بهترین رکورد شما</h3>
+        <div class="percent">۰٪ – بدون عنوان</div>
+        <div style="margin: 10px 0;">
+            <span class="stars">☆ ☆ ☆ ☆ ☆</span>
+        </div>
+        <div style="font-size:14px; color:#333;">⭐ مجموع ستاره‌ها: ۰</div>
+    </div>
+
+    <!-- REGISTER BOX -->
     <div class="card">
-        <h3 class="register-title">ثبت‌نام در سیستم 👤</h3>
-        <p style="color:#444;margin-top:6px;">برای ادامه، نام خود را وارد کنید:</p>
-
-        <input id="nameInput" class="input" placeholder="نام و نام خانوادگی...">
-
-        <button class="btn-green" onclick="saveName()">✔ ثبت نام و شروع</button>
-
-        <p style="font-size:13px;color:#777;margin-top:12px;">
-            🔒 اطلاعات شما فقط برای استفادهٔ آموزشی ذخیره می‌شود و محرمانه خواهد بود.
+        <div class="form-title">🧑‍🎓 ثبت نام در سیستم</div>
+        <p style="margin:0; color:#555;">
+            لطفاً نام خود را وارد کنید تا بتوانید از سیستم استفاده کنید:
         </p>
+
+        <input id="username" placeholder="نام و نام خانوادگی خود را بنویسید...">
+        <button class="btn-green" onclick="saveUser()">✔ ثبت نام و شروع</button>
+
+        <div class="tip">🔒 نام شما فقط برای شخصی‌سازی تجربه یادگیری ذخیره می‌شود</div>
     </div>
 
-    <!-- ACCESS PANEL -->
-    <div class="card" style="margin-top:25px;">
+    <!-- TRAINING MODE -->
+    <div class="mode-box">
+        <div class="form-title">🎯 انتخاب حالت تمرین</div>
 
-        <h3 style="font-size:22px;margin-bottom:15px;">دسترسی‌ها</h3>
+        <div class="mode-item">🇺🇸 → 🇮🇷 انگلیسی به فارسی</div>
+        <div class="mode-item">🇮🇷 → 🇺🇸 فارسی به انگلیسی</div>
+        <div class="mode-item mode-selected">🇺🇸 → 🇺🇸 انگلیسی به انگلیسی</div>
+        <div class="mode-item">🇺🇸 → 📖 تعریف به انگلیسی</div>
+    </div>
 
-        <button class="btn-white">👨‍🎓 ورود زبان‌آموز / ثبت‌نام</button>
-        <button class="btn-white">📈 مشاهده خلاصه عملکرد</button>
-        <button class="btn-white">📝 تست جدید</button>
-        <button class="btn-white">📊 تاریخچه</button>
-        <button class="btn-white">🔐 ورود مدیریت (Fred)</button>
+    <!-- SPEED -->
+    <div class="speed-box">
+        <div class="speed-title">📖 تنظیم سرعت خواندن</div>
+        <div style="color:#0d6efd; margin-bottom:12px;">سرعت فعلی: بسیار آهسته (0.5)</div>
 
+        <div class="speed-row">
+            <div class="speed-item">🚀 بسیار سریع</div>
+            <div class="speed-item">🚗 سریع</div>
+            <div class="speed-item">🚴 متوسط</div>
+            <div class="speed-item">🚶 آهسته</div>
+            <div class="speed-item speed-active">🐌 بسیار آهسته</div>
+        </div>
     </div>
 
 </div>
 
 <script>
-function saveName(){
-    let n = document.getElementById("nameInput").value.trim();
-    if(n.length < 2){
-        alert("لطفاً نام معتبر وارد کنید");
+function saveUser() {
+    let name = document.getElementById("username").value.trim();
+    if (!name) {
+        alert("لطفاً نام را وارد کنید");
         return;
     }
-    localStorage.setItem("fred_name", n);
-    alert("ثبت شد! خوش اومدی " + n);
+    localStorage.setItem("userName", name);
+    alert("ثبت شد!");
 }
 </script>
 
